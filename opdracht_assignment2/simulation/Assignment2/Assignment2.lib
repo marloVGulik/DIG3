@@ -1,0 +1,35 @@
+timestamp=1662641484041
+
+[~A]
+ModifyID=2
+Version=74
+
+[~MFT]
+0=10|0Assignment2.mgf|3668|920
+1=4|1Assignment2.mgf|2318|1758
+3=2|3Assignment2.mgf|0|0
+
+[assignment2package]
+E=1*1758
+I=0*760
+I/assignment2package=I/Assignment2Package 0*3086
+M=3|2|vef|1662641443881|../src/Assignment2Package.vhdl|0*300*0x038fc44a01c6b8e79eef5f4768bca9b6cba9a4ef|0*658*0xd986fd7175c8cf28cd774bcadde79966
+M/assignment2package=M/Assignment2Package 4|2|vef|1662641484022|../src/Assignment2Package.vhdl|0*972*0x1253ab563f303466dd5840f3416ee05935bf7c9c|0*1160*0xb966535deb9617f745ced53ae4cc1a7f
+R=../src/Assignment2Package.vhdl|10
+Version=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b40400090f01c9|6cba34f8c8d107d7b552932057dff577d3457ac864c7a08cdce614e3d8b5dafaf7f0a53f7511d1fa9f982cfb3b8dd215
+Version/assignment2package=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b40400090f01c9|6cba34f8c8d107d7b552932057dff577d3457ac864c7a08cdce614e3d8b5dafa8dfddeba1941291ee0d0e848b5feb6c9
+
+[genericclockdelay]
+A/behaviour=21|../src/Assignment2Package.vhdl|59|1*2318
+BinW64/behaviour=3*0
+I=0*2186
+I/behaviour=0*3668
+M=11|2|vef|1662641443887|../src/Assignment2Package.vhdl|0*1764*0x10e1b902ac8d1f14ec39da95b37618780e1cae3d|0*2085*0xd986fd7175c8cf28cd774bcadde79966
+M/behaviour=21|2|vef|1662641484025|../src/Assignment2Package.vhdl|0*3317*0xb4f8ed8e7dfc9bc3dcce2b9251c21574a7124167|0*3554*0xb966535deb9617f745ced53ae4cc1a7f
+R=../src/Assignment2Package.vhdl|46
+Version=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b40400090f01c9|535ca1eda48452599abba9e2cd9bd0d99a495bb1937e820cb11a0404bdf5ae4015cdca56b34033b7a63d80f1e427ba74
+Version/behaviour=13.0.376.8320 (Windows64)|00000009789cd3f53756d0353230b40400090f01c9|687e04e33736ecc2f430230a4d258cac1cf3f6da28b33b2380de57447e824351ee8eb6338c834f10c48cdb26b6ff18d8
+
+[~U]
+assignment2package=Assignment2Package 3|0*0|0*142
+genericclockdelay=genericClockDelay 11|0*1514|

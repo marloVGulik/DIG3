@@ -1,0 +1,71 @@
+timestamp=1730037174126
+
+[~A]
+ModifyID=58
+Version=74
+
+[~MFT]
+0=16|0assignment3.mgf|95706|88242
+1=10|1assignment3.mgf|300553|296010
+3=8|3assignment3.mgf|80559|79388
+
+[assignment3package]
+E=1*296010
+I=0*35296
+I/assignment3package=I/Assignment3Package 0*94185
+M=3|2|vf5|1729688401479|../src/Assignment3Package.vhdl|0*34796*0xc08af8e729d6e62ea678e1b15cfa527c16fa7928|0*35194*0x23b75c12e3e89f2ef000564498faa8c2
+M/assignment3package=M/Assignment3Package 4|2|vf5|1730037174028|../src/Assignment3Package.vhdl|0*35506*0xb9c014ea08894a2541a5384bf5a7a11e53722c90|0*35694*0x20116f55b147878295aeff36dce7fc50
+R=../src/Assignment3Package.vhdl|11
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|1d6988ab0d3667888fb21202868070a605ecbdab566c01b79fedf7fcacd177ae5c9a98c9d5d02e5e02be4e8e3ed70f71
+Version/assignment3package=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|1d6988ab0d3667888fb21202868070a605ecbdab566c01b79fedf7fcacd177aed5dc0b95b23c72bb7980ea0b82a43525
+
+[circshift]
+A/circshiftarch=21|../src/Assignment3Package.vhdl|93|1*297928
+BinW64/circshiftarch=3*79990
+I=0*4132
+I/circshiftarch=0*94850
+M=11|2|vf5|1728822034738|../src/Assignment3Package.vhdl|0*3698*0xb774e3709ed11d5eb07b166b391121458a40d2b3|0*4039*0x23b75c12e3e89f2ef000564498faa8c2
+M/circshiftarch=21|2|vf5|1730037174046|../src/Assignment3Package.vhdl|0*92623*0x97a8aca2bac0757bb7f7d1a663997b3bd5bda1d1|0*93499*0x20116f55b147878295aeff36dce7fc50
+R=../src/Assignment3Package.vhdl|83
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|e745ce120e59914e5f898364a5bbd2ec18796be1c5367029fe50f9a304d13866be7062c5d7ed76f4ac71d1b77024015e
+Version/circshiftarch=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|26d9db27743635aea8dabd2f3014b61cb7c7d5e3c0d45bb82287309b5635c8e780dbc03178c6a0dfc2c576334575fdaf
+
+[opdr3flipflop]
+A/opdr3flipfloparch=21|../src/Assignment3Package.vhdl|62|1*297098
+BinW64/opdr3flipfloparch=3*79657
+I=0*83421
+I/opdr3flipfloparch=0*94627
+M=11|2|vf5|1729948945795|../src/Assignment3Package.vhdl|0*83097*0x37d568bf01e853a5c837a7ab215ef7f6cacfe76f|0*83324*0x23b75c12e3e89f2ef000564498faa8c2
+M/opdr3flipfloparch=21|2|vf5|1730037174040|../src/Assignment3Package.vhdl|0*83626*0x677b49e511f88c160f1aca2d111b3cc1b132b87d|0*83912*0x20116f55b147878295aeff36dce7fc50
+R=../src/Assignment3Package.vhdl|57
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|a86320ec3f7a8dccc8c1f2d753ba264e786c0d09f4cfac2eb6ffcce44ebbbbc2f3ef019ee3dbc925b2f0a6634efcaa00
+Version/opdr3flipfloparch=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|a86320ec3f7a8dccc8c1f2d753ba264e347aa591271eef61bd056b10d2bfb54c5df4ed730ff1c192440779645522a672
+
+[opdr3mux]
+A/opdr3muxarch=A/opdr3MuxArch 21|../src/Assignment3Package.vhdl|46|1*296388
+BinW64/opdr3muxarch=3*79388
+I=0*2036
+I/opdr3muxarch=I/opdr3MuxArch 0*94414
+M=11|2|vf5|1728822034725|../src/Assignment3Package.vhdl|0*1726*0xbaa66b14c4cd21deb190af2a54e19cac897a3073|0*1944*0x23b75c12e3e89f2ef000564498faa8c2
+M/opdr3muxarch=M/opdr3MuxArch 21|2|vf5|1730037174034|../src/Assignment3Package.vhdl|0*90654*0x2bb73d9ce19ef393c436f45e2b48dfc3c99b9ca5|0*90838*0x20116f55b147878295aeff36dce7fc50
+R=../src/Assignment3Package.vhdl|41
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|e8809aac614cbdfa5aa260173da5f71f9dc5b99f766d89beef52f8a7e86d6294e61ce5ed962d28e227d804a0e732bbc3
+Version/opdr3muxarch=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|3977af0c1c16b044124b58b17d338b7aaa29d74750d1b37a4d0f5b56f78965c083799e60cb1b2703018733cd09cff43a
+
+[testbench]
+A/testbench=21|../src/testbench.vhd|34|1*300553
+BinW64/testbench=3*80559
+I=0*36773
+I/testbench=0*95706
+M=11|2|vf5|1729688401525|../src/testbench.vhd|0*4457*0xac22481e0efbc747d6b8fdfffaa2e856805161b6|0*4659*0x23b75c12e3e89f2ef000564498faa8c2
+M/testbench=21|2|vf5|1730037174092|../src/testbench.vhd|0*95135*0x44c7c7d8d7ba7ea55f2af1216f30c9f87f8e3bd5|0*95610*0x20116f55b147878295aeff36dce7fc50
+R=../src/testbench.vhd|29
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|9c08cd30fe0f9550ac0d051aa32c9ba5030c5f4de3ffa3c97f58c5528f1d7913799edc69ece3b911d41d15bad503c485
+Version/testbench=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|9c08cd30fe0f9550ac0d051aa32c9ba5030c5f4de3ffa3c97f58c5528f1d7913f73501882f665f7c0a8f9771b54aebb4
+
+[~U]
+assignment3package=Assignment3Package 3|0*34504|0*34646
+circshift=11|0*3458|
+opdr3flipflop=11|0*82899|
+opdr3mux=opdr3Mux 11|0*1542|
+testbench=11|0*4333|

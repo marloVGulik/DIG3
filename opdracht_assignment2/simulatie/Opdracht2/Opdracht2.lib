@@ -1,0 +1,47 @@
+timestamp=1727939207192
+
+[~A]
+ModifyID=43
+Version=74
+
+[~MFT]
+0=8|0Opdracht2.mgf|38587|34331
+1=2|1Opdracht2.mgf|90995|89531
+3=2|3Opdracht2.mgf|18546|17950
+
+[assignment2package]
+E=1*89531
+I=0*6017
+I/assignment2package=I/Assignment2Package 0*37733
+M=3|2|vf5|1726745143211|../../Assignment2Package.vhdl|0*5559*0x67715b644b6f0f3bc4be73e78c213fc42fcd5fd0|0*5916*0x23b75c12e3e89f2ef000564498faa8c2
+M/assignment2package=M/Assignment2Package 4|2|vf5|1727340446812|../../Assignment2Package.vhdl|0*6227*0xfda1b6c00f07eba5536b187bb5d32e01516a1a21|0*6414*0x20116f55b147878295aeff36dce7fc50
+R=../../Assignment2Package.vhdl|10
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|6cba34f8c8d107d7b552932057dff577d3457ac864c7a08cdce614e3d8b5dafa0b44b666d6b3a3e4d064fc10a9ed3c2d
+Version/assignment2package=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|6cba34f8c8d107d7b552932057dff577d3457ac864c7a08cdce614e3d8b5dafafd307b2fa563b1dc8470b1c5c4bf128a
+
+[genericclockdelay]
+A/behaviour=21|../../Assignment2Package.vhdl|60|1*89908
+BinW64/behaviour=3*17950
+I=0*7435
+I/behaviour=0*37962
+M=11|2|vf5|1726745143217|../../Assignment2Package.vhdl|0*7015*0x678ac18ff1431a830adb6783e240d8a7bbe6653e|0*7335*0x23b75c12e3e89f2ef000564498faa8c2
+M/behaviour=21|2|vf5|1727340446818|../../Assignment2Package.vhdl|0*26917*0x0ea8cf03a7bafb530b8137255fad32f3fba5b5da|0*27397*0x20116f55b147878295aeff36dce7fc50
+R=../../Assignment2Package.vhdl|47
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|535ca1eda48452599abba9e2cd9bd0d99a495bb1937e820cb11a0404bdf5ae408166e0c8bb97c11aa06570d579342a3a
+Version/behaviour=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|687e04e33736ecc2f430230a4d258cac1cf3f6da28b33b2380de57447e8243516e6374e9da3df976ddae190302fe5353
+
+[testbench]
+A/testbench=A/TestBench 21|../src/TestBench.vhd|36|1*90995
+BinW64/testbench=3*18546
+I=0*8053
+I/testbench=I/TestBench 0*38587
+M=11|2|vf5|1726745143219|../src/TestBench.vhd|0*7768*0xfa965c7720645182935f4de3dfd0bbd59944251b|0*7970*0x23b75c12e3e89f2ef000564498faa8c2
+M/testbench=M/TestBench 21|2|vf5|1727939207145|../src/TestBench.vhd|0*38181*0x9fbb1a081c8976c167a94f4c1a538cfd882107cf|0*38491*0x20116f55b147878295aeff36dce7fc50
+R=../src/TestBench.vhd|31
+Version=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|9c08cd30fe0f9550ac0d051aa32c9ba5030c5f4de3ffa3c97f58c5528f1d7913c11e38b549ca65057cd62f9392b14914
+Version/testbench=15.0.261.9132 (Windows64)|00000003789cd3f5370600015b00b0|9c08cd30fe0f9550ac0d051aa32c9ba5030c5f4de3ffa3c97f58c5528f1d7913c2de1e0c32a31d7760d4456918da7fe8
+
+[~U]
+assignment2package=Assignment2Package 3|0*5259|0*5401
+genericclockdelay=genericClockDelay 11|0*6765|
+testbench=TestBench 11|0*7644|

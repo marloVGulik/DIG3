@@ -1,0 +1,80 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=Opdracht2
+[Library]
+Opdracht2=.\Opdracht2\Opdracht2.lib
+[$LibMap$]
+Opdracht2=.
+Active_lib=
+[IMPLEMENTATION]
+dont_run_translate=0
+dont_run_map=0
+dont_run_place=0
+dont_run_clock_boosting=1
+dont_run_memory_init=1
+dont_run_trace=0
+dont_run_simulation=0
+dont_run_bitgen=1
+FLOW_STEPS_RESET=0
+UCF=
+[Settings]
+RUN_MODE_SYNTH=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=IMPL_WITH_SYNTH
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+fileopenfolder=C:\Users\bkse\home\vakken_lokaal\dso2022\VHDL\opdracht_assignment2
+[Files]
+/..\..\Assignment2Package.vhdl=-1
+/TestBench.vhd=-1
+[Files.Data]
+.\..\Assignment2Package.vhdl=VHDL Source Code
+.\src\TestBench.vhd=VHDL Source Code
+[HierarchyViewer]
+HierarchyInformation=genericclockdelay|behaviour|0 testbench|testbench|0
+ShowHide=ShowTopLevel
+Selected=
+[folders]
+name0=ALINT-PRO Workspaces
+directory0=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension0=alintws
+name1=Coverage Databases
+directory1=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension1=acdb
+name2=Dll Libraries
+directory2=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension2=dll
+name3=Event Lists
+directory3=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension3=lst
+name4=HTML Files
+directory4=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension4=htm;html
+name5=Log Files
+directory5=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension5=log;htm;xml;txt
+name6=Matlab/Simulink Files
+directory6=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension6=m;mdl;slx
+name7=Memory Files
+directory7=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension7=mem;mif;hex
+name8=PDF Files
+directory8=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension8=pdf
+name9=Profiler Databases
+directory9=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension9=tbp
+name10=Script Files
+directory10=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension10=do;tcl;pl
+name11=Waveform Files
+directory11=C:\Users\Marlo van Gulik\Documents\School\Y2\dig\lab\VHDL\opdracht_assignment2\simulatie\
+extension11=asdb;awc;asdbc;asdbe

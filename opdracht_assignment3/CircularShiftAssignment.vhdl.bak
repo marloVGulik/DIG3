@@ -1,0 +1,79 @@
+------- Opdracht 3/ Assignment 3 DSDL practicum
+------- Altera DE10-Lite
+------- ir drs E.J Boks, HAN Embedded Systems Engineering. https://ese.han.nl
+ 
+------- Voltooi alle code hier onder / Complete all code below
+
+library ieee; 
+use ieee.std_logic_1164.all; 
+use work.SevenSegmentDriver.all;
+use work.Assignment2Package.all;
+use work.Assignment3Package.all;
+
+entity CircularShiftAssignment is
+
+	generic(NumberOfSSDs : positive :=6);
+
+		port(ADC_CLK_10 : in std_logic;
+			  KEY : in std_logic_vector(1 downto 0);
+			  SW  : in std_logic_vector(9 downto 0);
+			  LEDR : out std_logic_vector(9 downto 0);
+			  HEX0 : out std_logic_vector(0 to 7);  -- SSD0 (meest rechter)
+			  HEX1 : out std_logic_vector(0 to 7);
+			  HEX2 : out std_logic_vector(0 to 7);
+			  HEX3 : out std_logic_vector(0 to 7);
+			  HEX4 : out std_logic_vector(0 to 7);
+			  HEX5 : out std_logic_vector(0 to 7)); -- SSD1
+end entity;
+
+
+architecture CircularShiftAssignmentArch of CircularShiftAssignment is
+	constant LoadButton : natural := 0;
+	constant RotationDirectionButton : natural := 1;
+	
+	subtype Rotor is std_logic_vector(0 to 5);
+	constant loadPattern : Rotor := (0=>'0', others => '1');
+	
+	signal rst,load : std_logic;
+	signal active : boolean;
+	
+	signal startButton,pauseButton : std_logic;
+	signal rotationClock : std_logic;
+	
+	type RotationType is (AntiClockWise,ClockWise);
+	signal rotationDirection : RotationType;
+		
+	subtype RotationSegments is std_logic_vector(0 to ((Rotor'Length*NumberOfSSDs)-1));
+	
+	signal ssdSegments : RotationSegments;
+	signal ssdBuffer : RotationSegments;
+	
+begin
+
+-- Aanwijzingen : 
+-- Koppel de signalen aan de schakelaars/knoppen zoals je wilt.
+-- Instantieer een vertrager om de rotatie zichtbaar te maken voor het menselijk oog.
+-- Gebruik de circshift om een roterend element in de buffer te plaatsen. Gebruik for .. generate hier voor.
+-- Koppel de buffer aan de segmenten register op basis de draairichting.
+-- koppel de segmenten registers aan de HEX segmenten daar waar van toepassing.
+-- Gebruik LEDs om operationele staat en reset aan te geven.
+-- Schakel de ongebruikte LEDs uit.
+
+-- Clues :
+-- Link the signals to the switches/buttons as you like.
+-- Instance a retarder to make the rotation visible to the human eye.
+-- Use the circshift to place a rotating element in the buffer. Use for .. generate for this.
+-- Link the buffer to the segment register based on the direction of rotation.
+-- link the segment registers to the HEX segments where applicable.
+-- Use LEDs to indicate operational state and reset.
+-- Turn off the unused LEDs.
+
+
+-- Verwijder deze assert bij bewerking code / Remove this message when editing the code.
+assert false
+report "Beste student, Dit deel van de software ontbreekt/This part of the software is missing."
+severity failure;
+
+end architecture;
+
+

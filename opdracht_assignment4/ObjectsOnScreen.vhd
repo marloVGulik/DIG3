@@ -1,0 +1,171 @@
+ ------- Opdracht 4 / Assignment 4 DSDL practicum : Tekenen van rechthoeken en cirkels
+ ------- Altera DE10-Lite
+ ------- ir drs E.J Boks, HAN Embedded Systems Engineering. https://ese.han.nl
+ ------- Dit bestand bevat alle objekten die op het scherm worden afgebeeld.
+
+-- De objekten die getoond worden zijn:
+-- drie rechhoeken  links, midden en rechts.
+-- twee bewegende cirkels.
+-- De kleuren zijn vertikaal gedefinieerd : links , midden en rechts hebben aparte kleuren.
+-- De rechthoek en cirkel hebben een kleur die afhangt van de horizontale koordinaat.
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.Assignment4Package.all;
+
+entity ObjectsOnScreen is		
+
+	port(	vgaCoord	:	in	Coordinate;
+			rst		:	in std_logic;
+			Refresh	:	in	std_logic;
+			RGB      :  out RGBType);
+end;
+
+
+architecture AlleObjekten of ObjectsOnScreen is
+
+constant VGAWidth				: 	integer := 640;
+constant VGAHeight			: 	integer := 480;
+
+constant Screen				:  Rectangle := ((0,0),VGAWidth,VGAHeight);
+constant BlockWidth			:	integer := 50;
+constant BlockHeight			:	integer := 100;
+
+constant CommonYCoord 		: integer := ((VGAHeight-BlockHeight)/2); 
+
+constant Left : Rectangle   := ( (VGAWidth/32,CommonYCoord),BlockWidth,BlockHeight);
+constant Middle : Rectangle := ( ((VGAWidth-BlockWidth)/2,CommonYCoord), BlockWidth,BlockHeight);
+constant Right : Rectangle  := ( ((VGAWidth-BlockWidth),CommonYCoord),BlockWidth,BlockHeight);
+
+signal	CircleCoord1 	:	coordinate := (570,80);
+signal   CircleToRight1  : boolean := true;
+
+signal	CircleCoord2 	:	coordinate := (570,VGAHeight-80);
+signal   CircleToRight2  : boolean := false;
+
+constant	CircleRadius	:	integer := 50;
+
+signal	FoundLeft		: boolean;
+signal	FoundMiddle		: boolean;
+signal	FoundRight		: boolean;
+signal   DemoKleur,FoundCircle1,FoundCircle2 : boolean;
+
+signal LeftColour,CentreColour,RightColour,Circle1Colour,Circle2Colour : RGBType;
+		
+begin
+				
+DrawLeftRect	: DrawRectangle generic map (Left) port map(vgaCoord, FoundLeft);
+DrawMiddleRect	: DrawRectangle generic map (Middle) port map(vgaCoord, FoundMiddle);
+DrawRightRect	: DrawRectangle  generic map (Right) port map(vgaCoord, FoundRight);
+
+LeftColour <= Red;
+CentreColour <= Green;
+RightColour <= Blue;
+
+BovenCirkel : DrawCircle generic map(CircleRadius) port map (vgaCoord,CircleCoord1,FoundCircle1);
+OnderCirkel : DrawCircle generic map(CircleRadius) port map (vgaCoord,CircleCoord2,FoundCircle2);
+ 
+RGB <= LeftColour when (FoundLeft=true) else 
+		 CentreColour when (FoundMiddle=true) else 
+		 RightColour when (FoundRight=true ) else 
+		 Circle1Colour when (FoundCircle1=true) else 
+		 Circle2Colour when (FoundCircle2=true) else Black;
+		 
+-- De cirkels verplaatsen zich van links naar rechts heen en weer
+-- The circles move from left to right and back again.
+
+movementProcess : process(rst,Refresh)
+	constant cirk1Start : Coordinate := (100,80);
+	constant cirk2Start : Coordinate := (VGAWidth-100,VGAHeight-80);
+	begin
+	
+		if ('0'= rst) then
+			circleCoord1 <= cirk1Start;
+			circleCoord2 <= cirk2Start;
+			CircletoRight1 <= true;
+			CircleToRight2 <= false;
+		elsif (rising_edge(Refresh)) then				
+				-- Cirkel 1 
+				if (true = CoordinateInRectangle(CircleCoord1, Screen)) then
+					
+					if (true=CircleToRight1) then
+						CircleCoord1.x <= CircleCoord1.x +1;
+					else
+						CircleCoord1.x <= CircleCoord1.x-1;
+					end if;
+				else
+					if (true=CircleToRight1) then
+						CircleCoord1.x <= CircleCoord1.x - 1;
+						CircleToRight1 <= false;
+					else
+						CircleCoord1.x <= CircleCoord1.x+1;
+						CircleToRight1 <= true;
+					end if;
+					
+					CircleCoord1.y <=cirk1Start.y;
+				end if;
+				
+				-- Cirkel 2 
+				if (true = CoordinateInRectangle(CircleCoord2, Screen)) then
+					
+					if (true=CircleToRight2) then
+						CircleCoord2.x <= CircleCoord2.x +1;
+					else
+						CircleCoord2.x <= CircleCoord2.x-1;
+					end if;
+				else
+					if (true=CircleToRight2) then
+						CircleCoord2.x <= CircleCoord2.x - 1;
+						CircleToRight2 <= false;
+					else
+						CircleCoord2.x <= CircleCoord2.x+1;
+						CircleToRight2 <= true;
+					end if;
+					
+					CircleCoord2.y <=cirk2Start.y;
+				end if;
+		end if;
+end process;
+
+	
+-- De kleuren worden aangepast op basis van de horizontale koordinaat.
+-- The colors are adjusted based on the horizontal coordinate.
+coloursProcess : process(Refresh)
+	variable circle1LMatch,circle1RMatch, circle2LMatch, circle2RMatch : Coordinate;
+	variable ck1 : Rectangle;
+begin
+		if (falling_edge(Refresh)) then
+				
+				circle1LMatch := (circleCoord1.x-CircleRadius,VGAHeight/2);
+				circle1RMatch := (circleCoord1.x+CircleRadius,VGAHeight/2);		
+								
+				if ((Left.p.x <= circle1RMatch.x) and Left.p.x+Left.w >= circle1LMatch.x) then						
+					Circle1Colour <= LeftColour;
+				elsif ((Middle.p.x <= circle1RMatch.x) and Middle.p.x+Middle.w >= circle1LMatch.x) then
+					Circle1Colour <= CentreColour;
+				elsif ((Right.p.x <= circle1RMatch.x) and Right.p.x+Right.w >= circle1LMatch.x) then
+					Circle1Colour <= RightColour;	
+				else
+					Circle1Colour <= White;
+				end if;
+	
+				circle2LMatch := (circleCoord2.x-CircleRadius,VGAHeight/2);
+				circle2RMatch := (circleCoord2.x+CircleRadius,VGAHeight/2);
+	
+				if ((Left.p.x <= circle2RMatch.x) and Left.p.x+Left.w >= circle2LMatch.x) then						
+					Circle2Colour <= LeftColour;
+				elsif ((Middle.p.x <= circle2RMatch.x) and Middle.p.x+Middle.w >= circle2LMatch.x) then
+					Circle2Colour <= CentreColour;
+				elsif ((Right.p.x <= circle2RMatch.x) and Right.p.x+Right.w >= circle2LMatch.x) then
+					Circle2Colour <= RightColour;	
+				else
+					Circle2Colour <= White;
+				end if;
+				
+		end if;
+end process;
+
+
+
+end;

@@ -1,0 +1,37 @@
+Active-HDL 15.0.261.9132 2025-10-22 15:47:47
+
+Elaboration top modules:
+Architecture                  testbench(testbench)
+
+
+---------------------------------------------------------------------------------------------------------
+Entity        | Architecture      | Library     | Info | Compiler Version          | Compilation Options
+---------------------------------------------------------------------------------------------------------
+testbench     | testbench         | assignment3 |      | 15.0.261.9132 (Windows64) | -O3
+circshift     | circshiftarch     | assignment3 |      | 15.0.261.9132 (Windows64) | -O3
+opdr3Mux      | opdr3MuxArch      | assignment3 |      | 15.0.261.9132 (Windows64) | -O3
+opdr3flipflop | opdr3flipfloparch | assignment3 |      | 15.0.261.9132 (Windows64) | -O3
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+VHDL Package                      | Library     | Info | Compiler Version          | Compilation Options
+---------------------------------------------------------------------------------------------------------
+standard                          | std         |      |                           | <unavailable>
+TEXTIO                            | std         |      | 15.0.261.9132 (Windows64) |  -2019
+std_logic_1164                    | ieee        |      | 15.0.261.9132 (Windows64) |  -2008
+Assignment3Package                | assignment3 |      | 15.0.261.9132 (Windows64) | -O3
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+Library                           | Comment
+---------------------------------------------------------------------------------------------------------
+assignment3                       | None
+ieee                              | Standard IEEE packages library
+std                               | Standard VHDL library
+---------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -i 50000 -O5 +access +r +m+testbench testbench testbench
+
+
+The performance of simulation is reduced. Version Student Edition
